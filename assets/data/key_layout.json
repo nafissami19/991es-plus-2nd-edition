@@ -16,8 +16,7 @@
     "labelColor": "#F8D060",
     "shortcuts": [
       "F1",
-      "s",
-      "S"
+      "Shift"
     ],
     "rectSvg": {
       "x": 99,
@@ -169,8 +168,7 @@
     "keycap": "grey",
     "shortcuts": [
       "F3",
-      "Home",
-      "m"
+      "Home"
     ],
     "rectSvg": {
       "x": 427,
@@ -487,7 +485,7 @@
       "h": 40
     },
     "primary": "° ' \"",
-    "shift": "←",
+    "shift": "",
     "alpha": "B",
     "mode": "B",
     "type": "function",
@@ -542,7 +540,8 @@
     "type": "function",
     "keycap": "dark",
     "shortcuts": [
-      "s"
+      "s",
+      "S"
     ],
     "rectSvg": {
       "x": 329,
@@ -642,8 +641,7 @@
     "type": "function",
     "keycap": "dark",
     "shortcuts": [
-      "e",
-      "E"
+      "e"
     ],
     "rectSvg": {
       "x": 172,

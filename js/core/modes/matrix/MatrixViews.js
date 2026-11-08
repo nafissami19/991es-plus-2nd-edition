@@ -7,12 +7,11 @@ import { Matrix } from './Matrix.js';
 
 /**
  * SHIFT 4 MATRIX Menu:
- * Page 1:
- * 1:Dim    2:Data
- * 3:MatA   4:MatB
- * Page 2:
- * 5:MatC   6:MatAns
- * 7:det    8:Trn
+ * All 8 authentic options displayed simultaneously across 4 rows (per 2nd edition LCD):
+ * Line 1: 1:Dim    2:Data
+ * Line 2: 3:MatA   4:MatB
+ * Line 3: 5:MatC   6:MatAns
+ * Line 4: 7:det    8:Trn
  */
 export class MatrixMenuView {
   menuScreen = true; // official screen shows no status icons (User's Guide captures)
@@ -20,13 +19,11 @@ export class MatrixMenuView {
   constructor(calc, app) {
     this.calc = calc;
     this.app = app;
-    this.page = 0; // 0 = page 1, 1 = page 2
     this.isOverlay = true;
   }
 
   indicators(set) {
-    if (this.page === 0) set.add('Down');
-    else set.add('Up');
+    // fx-991ES Plus 2nd edition displays all 8 options on a single screen without pagination
   }
 
   onKey(ev) {
@@ -36,16 +33,8 @@ export class MatrixMenuView {
       this.calc.closeAllOverlays();
       return true;
     }
-    if (k === 'DOWN') {
-      this.page = 1;
-      return true;
-    }
-    if (k === 'UP') {
-      this.page = 0;
-      return true;
-    }
 
-    // Direct key execution from either page
+    // Direct key execution for options 1 to 8
     if (k === '1') {
       // 1: Dim
       this.calc.replaceView(new MatrixVarSelectView(this.calc, this.app, 'dim'));
@@ -93,25 +82,20 @@ export class MatrixMenuView {
 
   render(scr) {
     scr.clear();
-    if (this.page === 0) {
-      scr.text(0, 1, '1:Dim', { font: 'small', record: false });
-      scr.text(48, 1, '2:Data', { font: 'small', record: false });
-      scr.text(0, 9, '3:MatA', { font: 'small', record: false });
-      scr.text(48, 9, '4:MatB', { font: 'small', record: false });
-      scr.lines = [
-        '1:Dim    2:Data',
-        '3:MatA   4:MatB'
-      ];
-    } else {
-      scr.text(0, 1, '5:MatC', { font: 'small', record: false });
-      scr.text(48, 1, '6:MatAns', { font: 'small', record: false });
-      scr.text(0, 9, '7:det', { font: 'small', record: false });
-      scr.text(48, 9, '8:Trn', { font: 'small', record: false });
-      scr.lines = [
-        '5:MatC   6:MatAns',
-        '7:det    8:Trn'
-      ];
-    }
+    scr.text(0, 1, '1:Dim', { font: 'small', record: false });
+    scr.text(48, 1, '2:Data', { font: 'small', record: false });
+    scr.text(0, 9, '3:MatA', { font: 'small', record: false });
+    scr.text(48, 9, '4:MatB', { font: 'small', record: false });
+    scr.text(0, 17, '5:MatC', { font: 'small', record: false });
+    scr.text(48, 17, '6:MatAns', { font: 'small', record: false });
+    scr.text(0, 25, '7:det', { font: 'small', record: false });
+    scr.text(48, 25, '8:Trn', { font: 'small', record: false });
+    scr.lines = [
+      '1:Dim    2:Data',
+      '3:MatA   4:MatB',
+      '5:MatC   6:MatAns',
+      '7:det    8:Trn'
+    ];
   }
 }
 

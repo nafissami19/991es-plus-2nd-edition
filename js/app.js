@@ -27,7 +27,7 @@ const store = {
 };
 
 function readPrefs() {
-  try { return { sound: true, enlargeLcd: false, ...JSON.parse(store.get(PREFS_KEY) || '{}') }; } catch { return { sound: true, enlargeLcd: false }; }
+  return { sound: false, enlargeLcd: false };
 }
 
 /** Loads the core and restores saved state. Returns null if the core can't load. */
@@ -54,30 +54,32 @@ async function createCalculator() {
   }
 }
 
-// Short synthesised click (no audio files).
+/** Detects whether the authentic emulator faceplate image is present or if we fall back to SVG. */
+export function detectFaceplateKind() {
+  return new Promise((resolve) => {
+    const real = new Image();
+    real.onload = () => resolve('real');
+    real.onerror = () => {
+      const svg = new Image();
+      svg.onload = () => resolve('svg');
+      svg.onerror = () => resolve('none');
+      svg.src = 'assets/faceplate/faceplate.svg';
+    };
+    real.src = 'assets/images/faceplate.png';
+    if (real.complete && real.naturalWidth > 0) {
+      resolve('real');
+    }
+  });
+}
+
+// Key clicks disabled per user request
 class KeyClick {
-  constructor(enabled) { this.enabled = enabled; this.ctx = null; }
-  play() {
-    if (!this.enabled) return;
-    try {
-      this.ctx ??= new (window.AudioContext || window.webkitAudioContext)();
-      const t = this.ctx.currentTime;
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(600, t);
-      osc.frequency.exponentialRampToValueAtTime(120, t + 0.015);
-      gain.gain.setValueAtTime(0.15, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.015);
-      osc.connect(gain).connect(this.ctx.destination);
-      osc.start(t);
-      osc.stop(t + 0.02);
-    } catch { /* audio is optional */ }
-  }
+  constructor() { this.enabled = false; }
+  play() {}
 }
 
 class App {
-  constructor({ calc, config, layout }) {
+  constructor({ calc, config, layout, faceplateKind = 'real' }) {
     this.calc = calc;
     this.config = config;
     this.layout = layout;
@@ -94,6 +96,7 @@ class App {
     this.chassis = document.getElementById('chassis');
     this.stage = document.getElementById('stage');
 
+    this.setFaceplate(faceplateKind);
     this.placeCanvases();
     this.fit();
     this.lcd = new CanvasLCD(
@@ -102,10 +105,10 @@ class App {
       config.display,
     );
     this.lcd.loadStatusIcons();
-    this.detectFaceplate();
+
 
     this.keypad = new Keypad(document.getElementById('keypad'), layout, (name) => this.press(name));
-    if (this.faceplateKind) this.keypad.useRects(this.faceplateKind === 'real' ? 'rect' : 'rectSvg');
+    this.keypad.useRects(this.faceplateKind === 'real' ? 'rect' : 'rectSvg');
 
     this.channel = 'BroadcastChannel' in window ? new BroadcastChannel(CHANNEL_NAME) : null;
     if (this.channel) this.channel.onmessage = (e) => this.onChannel(e.data);
@@ -218,7 +221,7 @@ class App {
       el.style.height = `calc(var(--s) * ${h}px)`;
     };
     put(document.getElementById('lcdCanvas'), d.x ?? 130, d.y ?? 256, d.width ?? 384, d.height ?? 124);
-    put(document.getElementById('lcdStatusCanvas'), sb.x ?? 130, sb.y ?? 236, sb.width ?? 384, sb.height ?? 18);
+    put(document.getElementById('lcdStatusCanvas'), sb.x ?? 130, sb.y ?? 240, sb.width ?? 384, sb.height ?? 16);
     // LCD glass of the real faceplate, repainted in the LCD background colour so no lighter rim shows
     const g = this.config.glass;
     const glass = document.getElementById('lcdGlass');
@@ -245,22 +248,17 @@ class App {
    * is used when present; otherwise our own SVG drawing, with its own key positions.
    */
   detectFaceplate() {
-    const real = new Image();
-    real.onload = () => this.setFaceplate('real');
-    real.onerror = () => {
-      const svg = new Image();
-      svg.onload = () => this.setFaceplate('svg');
-      svg.onerror = () => this.setFaceplate('none');
-      svg.src = 'assets/faceplate/faceplate.svg';
-    };
-    real.src = 'assets/images/faceplate.png';
+    detectFaceplateKind().then((kind) => this.setFaceplate(kind));
   }
 
   setFaceplate(kind) {
     this.faceplateKind = kind;
     this.chassis.classList.toggle('real-faceplate', kind === 'real');
+    this.chassis.classList.toggle('svg-faceplate', kind === 'svg');
     this.chassis.classList.toggle('no-faceplate', kind === 'none');
     if (kind === 'real') this.chassis.style.backgroundImage = "url('assets/images/faceplate.png')";
+    else if (kind === 'svg') this.chassis.style.backgroundImage = "url('assets/faceplate/faceplate.svg')";
+    else this.chassis.style.backgroundImage = '';
     this.keypad?.useRects(kind === 'real' ? 'rect' : 'rectSvg');
   }
 
@@ -439,11 +437,11 @@ class App {
     const d = this.config.display || {};
     const sb = this.config.statusBar || {};
     const statusW = sb.width || 384;
-    const statusH = sb.height || 18;
+    const statusH = sb.height || 16;
     const mainW = d.width || 384;
     const mainH = d.height || 124;
     const W = Math.max(statusW, mainW);
-    const gap = 2;
+    const gap = 0;
     const H = statusH + gap + mainH;
 
     const pad = withFrame ? 12 : 0;
@@ -506,12 +504,19 @@ function registerServiceWorker() {
 
 async function main() {
   performance.setResourceTimingBufferSize?.(2000);
-  const [config, layout, calc] = await Promise.all([
-    loadLcdConfig(),
-    loadKeyLayout().catch((e) => { console.error(e); return []; }),
-    createCalculator(),
-  ]);
-  window.app = new App({ calc, config, layout });
+  try {
+    const [config, layout, calc, faceplateKind] = await Promise.all([
+      loadLcdConfig(),
+      loadKeyLayout().catch((e) => { console.error(e); return []; }),
+      createCalculator(),
+      detectFaceplateKind(),
+    ]);
+    window.app = new App({ calc, config, layout, faceplateKind });
+  } catch (err) {
+    console.error('App failed to initialize:', err);
+  } finally {
+    document.getElementById('chassis')?.classList.add('ready');
+  }
   if (document.readyState === 'complete') registerServiceWorker();
   else window.addEventListener('load', registerServiceWorker);
 }

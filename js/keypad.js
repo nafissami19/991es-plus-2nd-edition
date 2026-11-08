@@ -12,6 +12,7 @@ export const EXTRA_SHORTCUTS = {
   Enter: 'EXE', '=': 'EXE',
   Backspace: 'DEL', Delete: 'DEL', Del: 'DEL',
   Tab: 'AC', ' ': 'AC', Escape: 'AC', Esc: 'AC',
+  Shift: 'SHIFT',
   F1: 'SHIFT',
   F2: 'ALPHA',
   F3: 'MODE', Home: 'MODE',

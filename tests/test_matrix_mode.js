@@ -200,18 +200,13 @@ describe('Prompt 24 — MATRIX Mode (Mode 6)', () => {
   });
 
   describe('4. SHIFT 4 MATRIX Menu Operations', () => {
-    it('opens SHIFT 4 menu with 2 pages and 8 authentic options', () => {
+    it('opens SHIFT 4 menu with all 8 authentic options on screen', () => {
       const calc = new Calculator();
       calc.pressSequence('MODE 6 AC SHIFT 4');
-      let scr = calc.getScreen();
+      const scr = calc.getScreen();
       assert.deepStrictEqual(scr.lines, [
         '1:Dim    2:Data',
-        '3:MatA   4:MatB'
-      ]);
-
-      calc.press('DOWN');
-      scr = calc.getScreen();
-      assert.deepStrictEqual(scr.lines, [
+        '3:MatA   4:MatB',
         '5:MatC   6:MatAns',
         '7:det    8:Trn'
       ]);

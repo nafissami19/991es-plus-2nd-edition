@@ -6,12 +6,11 @@ import { VectorValue } from './VectorValue.js';
 
 /**
  * SHIFT 5 VECTOR Menu:
- * Page 1:
- * 1:Dim    2:Data
- * 3:VctA   4:VctB
- * Page 2:
- * 5:VctC   6:VctAns
- * 7:Dot
+ * All 7 authentic options displayed simultaneously across 4 rows (per 2nd edition LCD):
+ * Line 1: 1:Dim    2:Data
+ * Line 2: 3:VctA   4:VctB
+ * Line 3: 5:VctC   6:VctAns
+ * Line 4: 7:Dot
  */
 export class VectorMenuView {
   menuScreen = true; // official screen shows no status icons (User's Guide captures)
@@ -19,13 +18,11 @@ export class VectorMenuView {
   constructor(calc, app) {
     this.calc = calc;
     this.app = app;
-    this.page = 0; // 0 = page 1, 1 = page 2
     this.isOverlay = true;
   }
 
   indicators(set) {
-    if (this.page === 0) set.add('Down');
-    else set.add('Up');
+    // fx-991ES Plus 2nd edition displays all options on a single screen without pagination
   }
 
   onKey(ev) {
@@ -35,16 +32,8 @@ export class VectorMenuView {
       this.calc.closeAllOverlays();
       return true;
     }
-    if (k === 'DOWN') {
-      this.page = 1;
-      return true;
-    }
-    if (k === 'UP') {
-      this.page = 0;
-      return true;
-    }
 
-    // Direct key execution from either page
+    // Direct key execution for options 1 to 7
     if (k === '1') {
       // 1: Dim
       this.calc.replaceView(new VectorVarSelectView(this.calc, this.app, 'dim'));
@@ -88,24 +77,19 @@ export class VectorMenuView {
 
   render(scr) {
     scr.clear();
-    if (this.page === 0) {
-      scr.text(0, 1, '1:Dim', { font: 'small', record: false });
-      scr.text(48, 1, '2:Data', { font: 'small', record: false });
-      scr.text(0, 9, '3:VctA', { font: 'small', record: false });
-      scr.text(48, 9, '4:VctB', { font: 'small', record: false });
-      scr.lines = [
-        '1:Dim    2:Data',
-        '3:VctA   4:VctB'
-      ];
-    } else {
-      scr.text(0, 1, '5:VctC', { font: 'small', record: false });
-      scr.text(48, 1, '6:VctAns', { font: 'small', record: false });
-      scr.text(0, 9, '7:Dot', { font: 'small', record: false });
-      scr.lines = [
-        '5:VctC   6:VctAns',
-        '7:Dot'
-      ];
-    }
+    scr.text(0, 1, '1:Dim', { font: 'small', record: false });
+    scr.text(48, 1, '2:Data', { font: 'small', record: false });
+    scr.text(0, 9, '3:VctA', { font: 'small', record: false });
+    scr.text(48, 9, '4:VctB', { font: 'small', record: false });
+    scr.text(0, 17, '5:VctC', { font: 'small', record: false });
+    scr.text(48, 17, '6:VctAns', { font: 'small', record: false });
+    scr.text(0, 25, '7:Dot', { font: 'small', record: false });
+    scr.lines = [
+      '1:Dim    2:Data',
+      '3:VctA   4:VctB',
+      '5:VctC   6:VctAns',
+      '7:Dot'
+    ];
   }
 }
 

@@ -40,7 +40,15 @@ export function getFont(name) {
 }
 
 // Special ES glyphs and the plain characters to use when a font doesn't have them.
-const ALIASES = { '▸': '▶', '▷': '▶', '◁': '◀', 'ᴀ': 'A', 'ʙ': 'B', 'ᴄ': 'C', 'ℯ': 'e', 'ₙ': 'n' };
+const ALIASES = {
+  '▸': '▶', '▷': '▶', '◁': '◀',
+  'ᴀ': 'A', 'ʙ': 'B', 'ᴄ': 'C', 'ℯ': 'e', 'ₙ': 'n',
+  'µ': 'μ',
+  '⌟': '┘',
+  '–': '-', '—': '-',
+  'ˣ': 'x', 'ⁿ': 'n',
+  'ŷ': 'y', 'ȳ': 'y',
+};
 
 export function glyphFor(font, ch) {
   return font.glyphs[ch] || font.glyphs[ALIASES[ch]] || font.glyphs['?'] || font.glyphs[' '];

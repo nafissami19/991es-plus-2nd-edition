@@ -16,7 +16,6 @@ Thumbs.db
 # Rebuild with: python scripts/lcd_from_manual.py
 js/lcd/fonts/lcd_main.js
 js/lcd/fonts/lcd_small.js
-js/lcd/fonts/lcd_status.js
 tests/pixel/reference/
 tests/pixel/out/
 

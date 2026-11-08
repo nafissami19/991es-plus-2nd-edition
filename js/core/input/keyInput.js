@@ -74,8 +74,8 @@ export function applyInput(editor, action) {
 
 /** Keys that continue from the previous result by inserting "Ans" first. */
 export const CONTINUE_KEYS = {
-  normal: new Set(['ADD', 'SUB', 'MUL', 'DIV', 'SQUARE', 'INV', 'POWER']),
-  shift: new Set(['SQUARE', 'INV', 'MUL', 'DIV', 'ANS'])
+  normal: new Set(['ADD', 'SUB', 'MUL', 'DIV', 'SQUARE', 'INV', 'RECIP', 'POWER']),
+  shift: new Set(['SQUARE', 'INV', 'RECIP', 'MUL', 'DIV', 'ANS'])
 };
 
 export function isContinueKey(ev, o = {}) {

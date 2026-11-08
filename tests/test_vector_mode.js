@@ -147,19 +147,14 @@ describe('Prompt 26 — VECTOR Mode (Mode 8)', () => {
   });
 
   describe('4. SHIFT 5 VECTOR Menu Operations', () => {
-    it('opens SHIFT 5 menu with 2 pages and 7 authentic options', () => {
+    it('opens SHIFT 5 menu with all 7 authentic options on screen', () => {
       const calc = new Calculator();
       calc.pressSequence('MODE 8 AC SHIFT 5');
-      let scr = calc.getScreen();
+      const scr = calc.getScreen();
       assert.strictEqual(scr.lines[0], '1:Dim    2:Data');
       assert.strictEqual(scr.lines[1], '3:VctA   4:VctB');
-      assert.ok(calc.indicators().includes('Down'));
-
-      calc.press('DOWN');
-      scr = calc.getScreen();
-      assert.strictEqual(scr.lines[0], '5:VctC   6:VctAns');
-      assert.strictEqual(scr.lines[1], '7:Dot');
-      assert.ok(calc.indicators().includes('Up'));
+      assert.strictEqual(scr.lines[2], '5:VctC   6:VctAns');
+      assert.strictEqual(scr.lines[3], '7:Dot');
     });
 
     it('re-dimensions existing vector using 1:Dim', () => {
