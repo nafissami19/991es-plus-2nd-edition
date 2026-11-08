@@ -1,0 +1,25 @@
+{
+  "name": "30. Fix 3: 10/3*3=10.000 vs Rnd(10/3)*3=9.999",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Fix3"
+  },
+  "keys": [
+    "1",
+    "0",
+    "DIV",
+    "3",
+    "MUL",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "10.000",
+    "indicators": [
+      "D",
+      "FIX"
+    ]
+  }
+}

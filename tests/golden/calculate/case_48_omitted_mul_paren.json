@@ -1,0 +1,26 @@
+{
+  "name": "48. 6 / 2(1+2)",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "6",
+    "DIV",
+    "2",
+    "LPAREN",
+    "1",
+    "ADD",
+    "2",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

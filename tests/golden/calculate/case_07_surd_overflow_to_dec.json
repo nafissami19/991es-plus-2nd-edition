@@ -1,0 +1,25 @@
+{
+  "name": "7. 99√999 falls back to decimal",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "9",
+    "9",
+    "SQRT",
+    "9",
+    "9",
+    "9",
+    "EXE"
+  ],
+  "expect": {
+    "result": "3129.089165",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

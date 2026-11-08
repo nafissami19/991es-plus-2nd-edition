@@ -1,0 +1,24 @@
+node_modules/
+dist/
+docs/reference/
+docs/reference/captures/
+assets/reference/
+*.rom
+*.bin
+*.dll
+*.exe
+*.pdf
+.env
+.DS_Store
+Thumbs.db
+
+# Traced from the official User's Guide screen captures (Casio-derived, HARD RULE 2).
+# Rebuild with: python scripts/lcd_from_manual.py
+js/lcd/fonts/lcd_main.js
+js/lcd/fonts/lcd_small.js
+js/lcd/fonts/lcd_status.js
+tests/pixel/reference/
+tests/pixel/out/
+
+# Real faceplate from the official emulator (python scripts/extract_faceplate.py), personal use only.
+assets/images/

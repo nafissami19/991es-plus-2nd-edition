@@ -1,0 +1,33 @@
+{
+  "name": "38. π - 3.141592653",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "EXP10",
+    "SUB",
+    "3",
+    "DOT",
+    "1",
+    "4",
+    "1",
+    "5",
+    "9",
+    "2",
+    "6",
+    "5",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "5.898",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "11. 0.1 + 0.2 = 3/10 in MathO",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "0",
+    "DOT",
+    "1",
+    "ADD",
+    "0",
+    "DOT",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "result": "3/10",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

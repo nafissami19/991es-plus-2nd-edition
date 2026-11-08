@@ -1,0 +1,30 @@
+{
+  "name": "32. Pol(√2, √2) = r=2, θ=45",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "ADD",
+    "SQRT",
+    "2",
+    "RIGHT",
+    "SHIFT",
+    "RPAREN",
+    "SQRT",
+    "2",
+    "RIGHT",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "45",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

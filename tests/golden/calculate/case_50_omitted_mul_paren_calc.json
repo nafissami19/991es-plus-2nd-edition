@@ -1,0 +1,32 @@
+{
+  "name": "50. 4 sin 30 ) ( 30 + 10 * 3 = 120",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "4",
+    "SIN",
+    "3",
+    "0",
+    "RPAREN",
+    "LPAREN",
+    "3",
+    "0",
+    "ADD",
+    "1",
+    "0",
+    "MUL",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "120",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

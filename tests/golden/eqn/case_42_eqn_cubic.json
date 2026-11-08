@@ -1,0 +1,26 @@
+{
+  "name": "42. EQN 4: x³-2x²-x+2=0 -> roots",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO"
+  },
+  "keys": [
+    "MODE",
+    "5",
+    "4",
+    "1",
+    "EXE",
+    "NEG",
+    "2",
+    "EXE",
+    "NEG",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "EXE"
+  ],
+  "expect": {
+    "result": "-1"
+  }
+}

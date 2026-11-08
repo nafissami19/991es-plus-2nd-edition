@@ -1,0 +1,27 @@
+{
+  "name": "21. 1.2 * 10^3 = 1200",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "DOT",
+    "2",
+    "MUL",
+    "1",
+    "0",
+    "POWER",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "1200",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

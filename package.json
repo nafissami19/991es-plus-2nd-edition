@@ -1,0 +1,21 @@
+{
+  "name": "casio-991es-plus-2nd",
+  "version": "1.0.0",
+  "description": "Pixel-accurate web re-creation of the Casio fx-991ES PLUS 2nd edition scientific calculator",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test \"tests/**/*.js\"",
+    "build:exe": "node scripts/build_exe.js",
+    "build:installer": "node scripts/build_installer.js"
+  },
+  "keywords": [
+    "casio",
+    "fx-991es-plus-2nd",
+    "calculator",
+    "emulator"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true
+}

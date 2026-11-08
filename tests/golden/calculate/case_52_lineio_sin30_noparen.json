@@ -1,0 +1,24 @@
+{
+  "name": "52. LineIO sin 30 + 15 = 0.7071067812",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SIN",
+    "3",
+    "0",
+    "ADD",
+    "1",
+    "5",
+    "EXE"
+  ],
+  "expect": {
+    "result": "0.7071067812",
+    "indicators": [
+      "D"
+    ]
+  }
+}

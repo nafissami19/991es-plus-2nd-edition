@@ -1,0 +1,24 @@
+{
+  "name": "29. 1234 = ENG ENG",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "EXE",
+    "ENG"
+  ],
+  "expect": {
+    "result": "1.234",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

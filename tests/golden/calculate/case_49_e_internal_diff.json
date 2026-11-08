@@ -1,0 +1,33 @@
+{
+  "name": "49. e - 2.718281828",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "ALPHA",
+    "EXP10",
+    "SUB",
+    "2",
+    "DOT",
+    "7",
+    "1",
+    "8",
+    "2",
+    "8",
+    "1",
+    "8",
+    "2",
+    "8",
+    "EXE"
+  ],
+  "expect": {
+    "result": "4.5904×10⁻¹⁰",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

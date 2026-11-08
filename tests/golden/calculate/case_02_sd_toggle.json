@@ -1,0 +1,28 @@
+{
+  "name": "2. S<=>D toggle 7/6 -> 1.166666667",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "2",
+    "FRAC",
+    "3",
+    "RIGHT",
+    "ADD",
+    "1",
+    "FRAC",
+    "2",
+    "EXE",
+    "SD"
+  ],
+  "expect": {
+    "result": "1.166666667",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

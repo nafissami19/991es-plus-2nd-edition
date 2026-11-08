@@ -1,0 +1,25 @@
+{
+  "name": "22. (5²)³ = 15625",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "LPAREN",
+    "5",
+    "SQUARE",
+    "RPAREN",
+    "SHIFT",
+    "SQUARE",
+    "EXE"
+  ],
+  "expect": {
+    "result": "15625",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

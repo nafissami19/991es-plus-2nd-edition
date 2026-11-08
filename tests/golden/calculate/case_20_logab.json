@@ -1,0 +1,26 @@
+{
+  "name": "20. log_2(16) = 4",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "LOGBASE",
+    "2",
+    "RIGHT",
+    "1",
+    "6",
+    "EXE"
+  ],
+  "expect": {
+    "result": "4",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 8"
+}

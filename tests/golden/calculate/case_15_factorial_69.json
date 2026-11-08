@@ -1,0 +1,23 @@
+{
+  "name": "15. 69! = 1.711224524×10⁹⁸",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "6",
+    "9",
+    "SHIFT",
+    "RECIP",
+    "EXE"
+  ],
+  "expect": {
+    "result": "1.711224524",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "41. EQN 1: x+2y=3, 2x+3y=4 -> x=-1, y=2",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO"
+  },
+  "keys": [
+    "MODE",
+    "5",
+    "1",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "EXE"
+  ],
+  "expect": {
+    "result": "-1"
+  }
+}

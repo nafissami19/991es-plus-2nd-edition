@@ -1,0 +1,1244 @@
+[
+  {
+    "name": "SHIFT",
+    "rect": {
+      "x": 104,
+      "y": 465,
+      "w": 50,
+      "h": 50
+    },
+    "primary": "SHIFT",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "grey",
+    "labelColor": "#F8D060",
+    "shortcuts": [
+      "F1",
+      "s",
+      "S"
+    ],
+    "rectSvg": {
+      "x": 99,
+      "y": 479,
+      "w": 49,
+      "h": 49
+    }
+  },
+  {
+    "name": "ALPHA",
+    "rect": {
+      "x": 175,
+      "y": 465,
+      "w": 50,
+      "h": 50
+    },
+    "primary": "ALPHA",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "grey",
+    "labelColor": "#F87878",
+    "shortcuts": [
+      "F2",
+      "a",
+      "A"
+    ],
+    "rectSvg": {
+      "x": 169,
+      "y": 479,
+      "w": 49,
+      "h": 49
+    }
+  },
+  {
+    "name": "UP",
+    "rect": {
+      "x": 299,
+      "y": 459,
+      "w": 45,
+      "h": 63
+    },
+    "primary": "▲",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "dpad",
+    "keycap": "silver",
+    "shortcuts": [
+      "ArrowUp",
+      "Up"
+    ],
+    "rectSvg": {
+      "x": 298,
+      "y": 450,
+      "w": 49,
+      "h": 45
+    }
+  },
+  {
+    "name": "LEFT",
+    "rect": {
+      "x": 235,
+      "y": 504,
+      "w": 65,
+      "h": 45
+    },
+    "primary": "◀",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "dpad",
+    "keycap": "silver",
+    "shortcuts": [
+      "ArrowLeft",
+      "Left"
+    ],
+    "rectSvg": {
+      "x": 236,
+      "y": 498,
+      "w": 45,
+      "h": 49
+    }
+  },
+  {
+    "name": "RIGHT",
+    "rect": {
+      "x": 343,
+      "y": 504,
+      "w": 65,
+      "h": 45
+    },
+    "primary": "▶",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "dpad",
+    "keycap": "silver",
+    "shortcuts": [
+      "ArrowRight",
+      "Right"
+    ],
+    "rectSvg": {
+      "x": 366,
+      "y": 498,
+      "w": 45,
+      "h": 49
+    }
+  },
+  {
+    "name": "DOWN",
+    "rect": {
+      "x": 299,
+      "y": 531,
+      "w": 45,
+      "h": 62
+    },
+    "primary": "▼",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "dpad",
+    "keycap": "silver",
+    "shortcuts": [
+      "ArrowDown",
+      "Down"
+    ],
+    "rectSvg": {
+      "x": 298,
+      "y": 546,
+      "w": 49,
+      "h": 45
+    }
+  },
+  {
+    "name": "MODE",
+    "rect": {
+      "x": 418,
+      "y": 465,
+      "w": 50,
+      "h": 50
+    },
+    "primary": "MODE",
+    "shift": "SETUP",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "grey",
+    "shortcuts": [
+      "F3",
+      "Home",
+      "m"
+    ],
+    "rectSvg": {
+      "x": 427,
+      "y": 479,
+      "w": 49,
+      "h": 49
+    }
+  },
+  {
+    "name": "ON",
+    "rect": {
+      "x": 489,
+      "y": 465,
+      "w": 50,
+      "h": 50
+    },
+    "primary": "ON",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "grey",
+    "shortcuts": [
+      "F4"
+    ],
+    "rectSvg": {
+      "x": 496,
+      "y": 479,
+      "w": 49,
+      "h": 49
+    }
+  },
+  {
+    "name": "CALC",
+    "rect": {
+      "x": 98,
+      "y": 561,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "CALC",
+    "shift": "SOLVE",
+    "alpha": "=",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "c",
+      "C"
+    ],
+    "rectSvg": {
+      "x": 94,
+      "y": 575,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "INTEGRAL",
+    "rect": {
+      "x": 175,
+      "y": 561,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "∫dx",
+    "shift": "d/dx",
+    "alpha": ":",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "i",
+      "I"
+    ],
+    "rectSvg": {
+      "x": 172,
+      "y": 575,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "RECIP",
+    "rect": {
+      "x": 404,
+      "y": 561,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "x⁻¹",
+    "shift": "x!",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "x",
+      "X"
+    ],
+    "rectSvg": {
+      "x": 406,
+      "y": 575,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "LOGBASE",
+    "rect": {
+      "x": 480,
+      "y": 561,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "log■□",
+    "shift": "Σ",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "l"
+    ],
+    "rectSvg": {
+      "x": 484,
+      "y": 575,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "FRAC",
+    "rect": {
+      "x": 98,
+      "y": 626,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "■/□",
+    "shift": "■■/□",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "f",
+      "F"
+    ],
+    "rectSvg": {
+      "x": 94,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "SQRT",
+    "rect": {
+      "x": 175,
+      "y": 626,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "√■",
+    "shift": "∛■",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "q",
+      "Q"
+    ],
+    "rectSvg": {
+      "x": 172,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "SQUARE",
+    "rect": {
+      "x": 251,
+      "y": 626,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "x²",
+    "shift": "x³",
+    "alpha": "",
+    "mode": "DEC",
+    "modeColor": "#70C0F8",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "@"
+    ],
+    "rectSvg": {
+      "x": 250,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "POWER",
+    "rect": {
+      "x": 328,
+      "y": 626,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "x^■",
+    "shift": "■√□",
+    "alpha": "",
+    "mode": "HEX",
+    "modeColor": "#70C0F8",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "^"
+    ],
+    "rectSvg": {
+      "x": 329,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "LOG",
+    "rect": {
+      "x": 404,
+      "y": 626,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "log",
+    "shift": "10^■",
+    "alpha": "",
+    "mode": "BIN",
+    "modeColor": "#70C0F8",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "L"
+    ],
+    "rectSvg": {
+      "x": 406,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "LN",
+    "rect": {
+      "x": 480,
+      "y": 626,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "ln",
+    "shift": "e^■",
+    "alpha": "",
+    "mode": "OCT",
+    "modeColor": "#70C0F8",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "n",
+      "N"
+    ],
+    "rectSvg": {
+      "x": 484,
+      "y": 640,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "NEG",
+    "rect": {
+      "x": 98,
+      "y": 692,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "(−)",
+    "shift": "∠",
+    "shiftColor": "#B080F0",
+    "alpha": "A",
+    "mode": "A",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "_"
+    ],
+    "rectSvg": {
+      "x": 94,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "DMS",
+    "rect": {
+      "x": 175,
+      "y": 692,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "° ' \"",
+    "shift": "←",
+    "alpha": "B",
+    "mode": "B",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "'"
+    ],
+    "rectSvg": {
+      "x": 172,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "HYP",
+    "rect": {
+      "x": 251,
+      "y": 692,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "hyp",
+    "shift": "Abs",
+    "alpha": "C",
+    "mode": "C",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "h",
+      "H"
+    ],
+    "rectSvg": {
+      "x": 250,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "SIN",
+    "rect": {
+      "x": 328,
+      "y": 692,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "sin",
+    "shift": "sin⁻¹",
+    "alpha": "D",
+    "mode": "D",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "s"
+    ],
+    "rectSvg": {
+      "x": 329,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "COS",
+    "rect": {
+      "x": 404,
+      "y": 692,
+      "w": 64,
+      "h": 40
+    },
+    "primary": "cos",
+    "shift": "cos⁻¹",
+    "alpha": "E",
+    "mode": "E",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "o",
+      "O"
+    ],
+    "rectSvg": {
+      "x": 406,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "TAN",
+    "rect": {
+      "x": 480,
+      "y": 692,
+      "w": 65,
+      "h": 40
+    },
+    "primary": "tan",
+    "shift": "tan⁻¹",
+    "alpha": "F",
+    "mode": "F",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "t",
+      "T"
+    ],
+    "rectSvg": {
+      "x": 484,
+      "y": 706,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "RCL",
+    "rect": {
+      "x": 98,
+      "y": 758,
+      "w": 65,
+      "h": 39
+    },
+    "primary": "RCL",
+    "shift": "STO",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "r",
+      "R"
+    ],
+    "rectSvg": {
+      "x": 94,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "ENG",
+    "rect": {
+      "x": 175,
+      "y": 758,
+      "w": 64,
+      "h": 39
+    },
+    "primary": "ENG",
+    "shift": "←",
+    "alpha": "i",
+    "alphaColor": "#B080F0",
+    "mode": "i",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "e",
+      "E"
+    ],
+    "rectSvg": {
+      "x": 172,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "LPAREN",
+    "rect": {
+      "x": 251,
+      "y": 758,
+      "w": 65,
+      "h": 39
+    },
+    "primary": "(",
+    "shift": "%",
+    "alpha": "",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "("
+    ],
+    "rectSvg": {
+      "x": 250,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "RPAREN",
+    "rect": {
+      "x": 328,
+      "y": 758,
+      "w": 64,
+      "h": 39
+    },
+    "primary": ")",
+    "shift": ",",
+    "alpha": "X",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      ")"
+    ],
+    "rectSvg": {
+      "x": 329,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "SD",
+    "rect": {
+      "x": 404,
+      "y": 758,
+      "w": 64,
+      "h": 39
+    },
+    "primary": "S⇔D",
+    "shift": "ab/c⇔d/c",
+    "alpha": "Y",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "v",
+      "V"
+    ],
+    "rectSvg": {
+      "x": 406,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "MPLUS",
+    "rect": {
+      "x": 480,
+      "y": 758,
+      "w": 65,
+      "h": 39
+    },
+    "primary": "M+",
+    "shift": "M−",
+    "alpha": "M",
+    "mode": "",
+    "type": "function",
+    "keycap": "dark",
+    "shortcuts": [
+      "m"
+    ],
+    "rectSvg": {
+      "x": 484,
+      "y": 772,
+      "w": 68,
+      "h": 40
+    }
+  },
+  {
+    "name": "7",
+    "rect": {
+      "x": 98,
+      "y": 833,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "7",
+    "shift": "CONST",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "7"
+    ],
+    "rectSvg": {
+      "x": 96,
+      "y": 841,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "8",
+    "rect": {
+      "x": 190,
+      "y": 833,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "8",
+    "shift": "CONV",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "8"
+    ],
+    "rectSvg": {
+      "x": 189,
+      "y": 841,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "9",
+    "rect": {
+      "x": 282,
+      "y": 833,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "9",
+    "shift": "CLR",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "9"
+    ],
+    "rectSvg": {
+      "x": 282,
+      "y": 841,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "DEL",
+    "rect": {
+      "x": 374,
+      "y": 833,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "DEL",
+    "shift": "INS",
+    "alpha": "",
+    "mode": "",
+    "type": "action",
+    "keycap": "lime",
+    "shortcuts": [
+      "Backspace",
+      "Delete"
+    ],
+    "rectSvg": {
+      "x": 375,
+      "y": 841,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "AC",
+    "rect": {
+      "x": 467,
+      "y": 833,
+      "w": 78,
+      "h": 57
+    },
+    "primary": "AC",
+    "shift": "OFF",
+    "alpha": "",
+    "mode": "",
+    "type": "action",
+    "keycap": "lime",
+    "shortcuts": [
+      "Tab",
+      " ",
+      "Escape"
+    ],
+    "rectSvg": {
+      "x": 468,
+      "y": 841,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "4",
+    "rect": {
+      "x": 98,
+      "y": 913,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "4",
+    "shift": "[MATRIX]",
+    "shiftColor": "#FFFFFF",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "4"
+    ],
+    "rectSvg": {
+      "x": 96,
+      "y": 921,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "5",
+    "rect": {
+      "x": 190,
+      "y": 913,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "5",
+    "shift": "[VECTOR]",
+    "shiftColor": "#FFFFFF",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "5"
+    ],
+    "rectSvg": {
+      "x": 189,
+      "y": 921,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "6",
+    "rect": {
+      "x": 282,
+      "y": 913,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "6",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "6"
+    ],
+    "rectSvg": {
+      "x": 282,
+      "y": 921,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "MUL",
+    "rect": {
+      "x": 374,
+      "y": 913,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "×",
+    "shift": "nPr",
+    "alpha": "",
+    "mode": "",
+    "type": "operator",
+    "keycap": "dark",
+    "shortcuts": [
+      "*"
+    ],
+    "rectSvg": {
+      "x": 375,
+      "y": 921,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "DIV",
+    "rect": {
+      "x": 467,
+      "y": 913,
+      "w": 78,
+      "h": 56
+    },
+    "primary": "÷",
+    "shift": "nCr",
+    "alpha": "",
+    "mode": "",
+    "type": "operator",
+    "keycap": "dark",
+    "shortcuts": [
+      "/"
+    ],
+    "rectSvg": {
+      "x": 468,
+      "y": 921,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "1",
+    "rect": {
+      "x": 98,
+      "y": 993,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "1",
+    "shift": "[STAT]",
+    "shiftColor": "#FFFFFF",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "1"
+    ],
+    "rectSvg": {
+      "x": 96,
+      "y": 1001,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "2",
+    "rect": {
+      "x": 190,
+      "y": 993,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "2",
+    "shift": "[CMPLX]",
+    "shiftColor": "#FFFFFF",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "2"
+    ],
+    "rectSvg": {
+      "x": 189,
+      "y": 1001,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "3",
+    "rect": {
+      "x": 282,
+      "y": 993,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "3",
+    "shift": "[BASE]",
+    "shiftColor": "#FFFFFF",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "3"
+    ],
+    "rectSvg": {
+      "x": 282,
+      "y": 1001,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "ADD",
+    "rect": {
+      "x": 374,
+      "y": 993,
+      "w": 79,
+      "h": 56
+    },
+    "primary": "+",
+    "shift": "Pol",
+    "alpha": "",
+    "mode": "",
+    "type": "operator",
+    "keycap": "dark",
+    "shortcuts": [
+      "+"
+    ],
+    "rectSvg": {
+      "x": 375,
+      "y": 1001,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "SUB",
+    "rect": {
+      "x": 467,
+      "y": 993,
+      "w": 78,
+      "h": 56
+    },
+    "primary": "−",
+    "shift": "Rec",
+    "alpha": "",
+    "mode": "",
+    "type": "operator",
+    "keycap": "dark",
+    "shortcuts": [
+      "-"
+    ],
+    "rectSvg": {
+      "x": 468,
+      "y": 1001,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "0",
+    "rect": {
+      "x": 98,
+      "y": 1072,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "0",
+    "shift": "Rnd",
+    "alpha": "",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "0"
+    ],
+    "rectSvg": {
+      "x": 96,
+      "y": 1081,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "DOT",
+    "rect": {
+      "x": 190,
+      "y": 1072,
+      "w": 79,
+      "h": 57
+    },
+    "primary": ".",
+    "shift": "Ran#",
+    "alpha": "RanInt#",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "."
+    ],
+    "rectSvg": {
+      "x": 189,
+      "y": 1081,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "EXP10",
+    "rect": {
+      "x": 282,
+      "y": 1072,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "×10ˣ",
+    "shift": "π",
+    "alpha": "e",
+    "mode": "",
+    "type": "number",
+    "keycap": "grey",
+    "shortcuts": [
+      "p",
+      "P",
+      "E"
+    ],
+    "rectSvg": {
+      "x": 282,
+      "y": 1081,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "ANS",
+    "rect": {
+      "x": 374,
+      "y": 1072,
+      "w": 79,
+      "h": 57
+    },
+    "primary": "Ans",
+    "shift": "DRG▸",
+    "alpha": "",
+    "mode": "",
+    "type": "action",
+    "keycap": "grey",
+    "shortcuts": [
+      "Ans",
+      "ans"
+    ],
+    "rectSvg": {
+      "x": 375,
+      "y": 1081,
+      "w": 80,
+      "h": 56
+    }
+  },
+  {
+    "name": "EXE",
+    "rect": {
+      "x": 467,
+      "y": 1072,
+      "w": 78,
+      "h": 57
+    },
+    "primary": "=",
+    "shift": "",
+    "alpha": "",
+    "mode": "",
+    "type": "action",
+    "keycap": "dark",
+    "shortcuts": [
+      "Enter",
+      "="
+    ],
+    "rectSvg": {
+      "x": 468,
+      "y": 1081,
+      "w": 80,
+      "h": 56
+    }
+  }
+]

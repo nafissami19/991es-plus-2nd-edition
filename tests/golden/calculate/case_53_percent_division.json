@@ -1,0 +1,28 @@
+{
+  "name": "53. 660 ÷ 880% = 75",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "6",
+    "6",
+    "0",
+    "DIV",
+    "8",
+    "8",
+    "0",
+    "SHIFT",
+    "LPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "75",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

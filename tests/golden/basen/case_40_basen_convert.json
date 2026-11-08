@@ -1,0 +1,22 @@
+{
+  "name": "40. BASE-N 15 * 37 = 555 -> HEX 0000022B",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO"
+  },
+  "keys": [
+    "MODE",
+    "4",
+    "SQUARE",
+    "1",
+    "5",
+    "MUL",
+    "3",
+    "7",
+    "EXE",
+    "POWER"
+  ],
+  "expect": {
+    "result": "0000022B"
+  }
+}

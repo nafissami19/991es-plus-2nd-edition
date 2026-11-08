@@ -1,0 +1,24 @@
+{
+  "name": "31. 10 P 4 = 5040, 10 C 4 = 210",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "0",
+    "SHIFT",
+    "MUL",
+    "4",
+    "EXE"
+  ],
+  "expect": {
+    "result": "5040",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

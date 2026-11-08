@@ -1,0 +1,32 @@
+{
+  "name": "33. Rad d/dx(sin X)|_\u03c0/2 = 0",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Rad",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "INTEGRAL",
+    "SIN",
+    "ALPHA",
+    "RPAREN",
+    "RPAREN",
+    "RIGHT",
+    "SHIFT",
+    "EXP10",
+    "DIV",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "result": "0",
+    "indicators": [
+      "Math",
+      "R"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 18"
+}

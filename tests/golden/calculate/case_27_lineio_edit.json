@@ -1,0 +1,25 @@
+{
+  "name": "27. LineIO 4*3+2.5=14.5 then edit -7.1 = 4.9",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "4",
+    "MUL",
+    "3",
+    "ADD",
+    "2",
+    "DOT",
+    "5",
+    "EXE"
+  ],
+  "expect": {
+    "result": "14.5",
+    "indicators": [
+      "D"
+    ]
+  }
+}

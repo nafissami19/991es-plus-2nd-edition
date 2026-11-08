@@ -1,0 +1,31 @@
+{
+  "name": "34. \u03a3(X+1, 1, 5) = 20",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "LOGBASE",
+    "ALPHA",
+    "RPAREN",
+    "ADD",
+    "1",
+    "RIGHT",
+    "1",
+    "RIGHT",
+    "5",
+    "EXE"
+  ],
+  "expect": {
+    "result": "20",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 18"
+}

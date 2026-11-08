@@ -1,0 +1,21 @@
+{
+  "name": "17. 14 / 0 * 2 throws Math ERROR",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "4",
+    "DIV",
+    "0",
+    "MUL",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "error": "Math ERROR"
+  }
+}

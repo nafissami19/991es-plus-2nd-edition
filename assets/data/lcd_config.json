@@ -1,0 +1,97 @@
+{
+  "faceplate": {
+    "width": 644,
+    "height": 1250,
+    "cushionColor": "#3A3D40",
+    "bodyColor": "#4D4D4D"
+  },
+  "display": {
+    "x": 130,
+    "y": 256,
+    "width": 384,
+    "height": 124,
+    "matrixWidth": 96,
+    "matrixHeight": 31,
+    "scale": 4,
+    "backgroundColor": "#C9D5CA",
+    "pixelOnColor": "#414540",
+    "pixelOffColor": "#C9D5CA"
+  },
+  "statusBar": {
+    "x": 130,
+    "y": 240,
+    "width": 384,
+    "height": 16,
+    "indicators": [
+      "S",
+      "A",
+      "M",
+      "STO",
+      "RCL",
+      "STAT",
+      "CMPLX",
+      "MAT",
+      "VCT",
+      "D",
+      "R",
+      "G",
+      "FIX",
+      "SCI",
+      "Math",
+      "▼",
+      "▲",
+      "Disp"
+    ],
+    "note": "Status strip: 96 dots wide, 4 dots tall, directly above the matrix (User's Guide captures); icons drawn at 3 sub-pixels per dot."
+  },
+  "modes": [
+    {
+      "id": 1,
+      "name": "COMP",
+      "code": "1"
+    },
+    {
+      "id": 2,
+      "name": "CMPLX",
+      "code": "2"
+    },
+    {
+      "id": 3,
+      "name": "STAT",
+      "code": "3"
+    },
+    {
+      "id": 4,
+      "name": "BASE-N",
+      "code": "4"
+    },
+    {
+      "id": 5,
+      "name": "EQN",
+      "code": "5"
+    },
+    {
+      "id": 6,
+      "name": "MATRIX",
+      "code": "6"
+    },
+    {
+      "id": 7,
+      "name": "TABLE",
+      "code": "7"
+    },
+    {
+      "id": 8,
+      "name": "VECTOR",
+      "code": "8"
+    }
+  ],
+  "glass": {
+    "x": 107,
+    "y": 224,
+    "width": 429,
+    "height": 172,
+    "radius": 5,
+    "note": "LCD glass of assets/images/faceplate.png (real faceplate), measured."
+  }
+}

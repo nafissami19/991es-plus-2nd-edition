@@ -1,0 +1,25 @@
+{
+  "name": "36. CONST 28 (C0) = 299792458",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "7",
+    "2",
+    "8",
+    "EXE"
+  ],
+  "expect": {
+    "result": "299792458",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 16"
+}

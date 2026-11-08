@@ -1,0 +1,31 @@
+{
+  "name": "24. \u221b5 + \u221b(-27) = -1.290024053",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "SQRT",
+    "5",
+    "RIGHT",
+    "ADD",
+    "SHIFT",
+    "SQRT",
+    "NEG",
+    "2",
+    "7",
+    "EXE"
+  ],
+  "expect": {
+    "result": "-1.290024053",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 8"
+}

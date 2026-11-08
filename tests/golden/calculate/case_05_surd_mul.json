@@ -1,0 +1,29 @@
+{
+  "name": "5. (√2 + 2) * √3 = √6 + 2√3",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "LPAREN",
+    "SQRT",
+    "2",
+    "RIGHT",
+    "ADD",
+    "2",
+    "RPAREN",
+    "MUL",
+    "SQRT",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "√6+2√3",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

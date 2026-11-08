@@ -1,0 +1,23 @@
+{
+  "name": "37. 5 cm -> in = 1.968503937",
+  "source": "unverified",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "5",
+    "SHIFT",
+    "8",
+    "0",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "result": "1.968503937",
+    "indicators": [
+      "D"
+    ]
+  }
+}

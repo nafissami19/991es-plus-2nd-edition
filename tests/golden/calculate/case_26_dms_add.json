@@ -1,0 +1,36 @@
+{
+  "name": "26. 2°20'30\" + 0°39'30\" = 3°0'0\"",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "2",
+    "DMS",
+    "2",
+    "0",
+    "DMS",
+    "3",
+    "0",
+    "DMS",
+    "ADD",
+    "0",
+    "DMS",
+    "3",
+    "9",
+    "DMS",
+    "3",
+    "0",
+    "DMS",
+    "EXE"
+  ],
+  "expect": {
+    "result": "3°0'0\"",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

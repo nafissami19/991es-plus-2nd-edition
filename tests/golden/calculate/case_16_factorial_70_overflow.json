@@ -1,0 +1,21 @@
+{
+  "name": "16. 70! throws Math ERROR",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "7",
+    "0",
+    "SHIFT",
+    "RECIP",
+    "EXE"
+  ],
+  "expect": {
+    "error": "Math ERROR"
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 10"
+}

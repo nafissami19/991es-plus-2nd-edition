@@ -1,0 +1,29 @@
+{
+  "name": "1. Fraction addition 2/3 + 1/2 = 7/6",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "2",
+    "FRAC",
+    "3",
+    "RIGHT",
+    "ADD",
+    "1",
+    "FRAC",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "result": "7/6",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 7"
+}

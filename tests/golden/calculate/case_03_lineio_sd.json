@@ -1,0 +1,22 @@
+{
+  "name": "3. LineIO 1/5 -> 0.2 -> 1┘5",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "DIV",
+    "5",
+    "EXE",
+    "SD"
+  ],
+  "expect": {
+    "result": "1\u25185",
+    "indicators": [
+      "D"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "19. log 1000) = 3",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "LOG",
+    "1",
+    "0",
+    "0",
+    "0",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "3",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 8"
+}

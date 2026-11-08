@@ -1,0 +1,24 @@
+{
+  "name": "10. LineIO sin 30) = 0.5",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SIN",
+    "3",
+    "0",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "0.5",
+    "indicators": [
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 7"
+}

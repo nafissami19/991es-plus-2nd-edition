@@ -1,0 +1,23 @@
+{
+  "name": "47. 1 / 2π priority",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "DIV",
+    "2",
+    "SHIFT",
+    "EXP10",
+    "EXE"
+  ],
+  "expect": {
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

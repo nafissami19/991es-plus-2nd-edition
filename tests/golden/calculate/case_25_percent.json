@@ -1,0 +1,29 @@
+{
+  "name": "25. 150 * 20% = 30",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "5",
+    "0",
+    "MUL",
+    "2",
+    "0",
+    "SHIFT",
+    "LPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "30",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 8"
+}

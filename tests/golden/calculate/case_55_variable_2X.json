@@ -1,0 +1,27 @@
+{
+  "name": "55. 2X with X=3",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "3",
+    "SHIFT",
+    "RCL",
+    "RPAREN",
+    "AC",
+    "2",
+    "ALPHA",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "6",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

@@ -1,0 +1,433 @@
+/* fx-991ES PLUS 2nd edition web re-creation: authentic calculator chassis and LCD rendering */
+
+:root {
+  --page-bg: #15171a;
+  --header-bg: #1c1f24;
+  --panel-bg: #1e2228;
+  --card-bg: #262b32;
+  --border-color: #353b45;
+  --text: #e6e9ec;
+  --text-dim: #9aa4ad;
+  --accent: #f8d060;
+  --btn-hover: #323842;
+  --btn-active: #404854;
+  --s: 0.6; /* faceplate scale, set dynamically by app.js */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+[hidden] {
+  display: none !important;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: var(--page-bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Header & Utility Toolbar */
+.app-header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
+}
+
+.header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 120ms, border-color 120ms;
+}
+
+.tool-btn:hover {
+  background: var(--btn-hover);
+  border-color: #4f5765;
+}
+
+.tool-btn:active {
+  background: var(--btn-active);
+}
+
+.tool-btn.active {
+  background: #3b4554;
+  border-color: var(--accent);
+}
+
+.help-mark {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* App Body Layout */
+.app-body {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Stage + Faceplate */
+.stage {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 8px;
+}
+
+.chassis {
+  position: relative;
+  flex: none;
+  width: calc(644px * var(--s));
+  height: calc(1250px * var(--s));
+  background: url('../assets/faceplate/faceplate.svg') no-repeat 0 0 / 100% 100%;
+  border-radius: calc(36px * var(--s));
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Fallback when faceplate SVG is not loaded */
+.chassis.no-faceplate {
+  background: linear-gradient(#3a3d42, #26282c);
+}
+.chassis.no-faceplate .lcd-canvas { outline: calc(10px * var(--s)) solid #202225; }
+
+/* Glass of the real faceplate picture, in the LCD colour (only shown with that picture) */
+.lcd-glass { position: absolute; display: none; background: #C9D5CA; }
+.chassis.real-faceplate .lcd-glass { display: block; }
+
+.lcd-canvas {
+  position: absolute;
+  display: block;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.keypad { position: absolute; inset: 0; }
+
+.calc-key {
+  position: absolute;
+  border-radius: calc(10px * var(--s));
+  cursor: pointer;
+  touch-action: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 60ms, box-shadow 60ms, transform 60ms;
+}
+
+.calc-key:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.calc-key.pressed {
+  background: rgba(0, 0, 0, 0.38);
+  box-shadow: inset 0 calc(3px * var(--s)) calc(6px * var(--s)) rgba(0, 0, 0, 0.85);
+  transform: translateY(calc(1px * var(--s)));
+}
+
+.calc-key.calc-key-dpad {
+  border-radius: 50%;
+}
+
+.calc-key.calc-key-dpad.pressed {
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 calc(2px * var(--s)) calc(6px * var(--s)) rgba(0, 0, 0, 0.9);
+}
+
+.key-label { display: none; pointer-events: none; }
+.no-faceplate .calc-key { background: #4a4e55; box-shadow: 0 2px 0 #1b1c1f; }
+.no-faceplate .calc-key.pressed { background: #33363b; box-shadow: none; }
+.no-faceplate .key-label {
+  display: block;
+  font-size: calc(18px * var(--s));
+  color: #f1f3f5;
+  white-space: nowrap;
+}
+
+/* KeyLog Panel */
+.keylog-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  background: var(--panel-bg);
+  border-left: 1px solid var(--border-color);
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.keylog-panel[hidden] {
+  display: none !important;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.panel-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.panel-toolbar {
+  display: flex;
+  gap: 6px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.btn-sm {
+  flex: 1;
+  padding: 4px 8px;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+
+.btn-sm:hover {
+  background: var(--btn-hover);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.icon-btn:hover {
+  color: var(--text);
+  background: var(--card-bg);
+}
+
+.keylog-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  user-select: text;
+}
+
+.keylog-list {
+  padding-left: 20px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #c9d1d9;
+}
+
+.keylog-list li {
+  margin-bottom: 2px;
+}
+
+/* Modal Overlay & Dialog */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal-overlay[hidden] {
+  display: none !important;
+}
+
+.modal-dialog {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.shortcut-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.shortcut-group h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.shortcut-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shortcut-table td {
+  padding: 6px 4px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.shortcut-table td:first-child {
+  white-space: nowrap;
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: #2b313a;
+  border: 1px solid #485260;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: #252b33;
+  color: #f1f3f5;
+  border: 1px solid #4a5462;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
+}
+
+.toast[hidden] {
+  display: none;
+}
+
+/* Mobile & Responsive */
+@media (max-width: 600px) {
+  .app-header {
+    padding: 6px 10px;
+  }
+  .brand-subtitle {
+    display: none;
+  }
+  .tool-btn span {
+    display: none;
+  }
+  .tool-btn {
+    padding: 6px 8px;
+  }
+  .keylog-panel {
+    width: 100%;
+  }
+  .shortcut-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

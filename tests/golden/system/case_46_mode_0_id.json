@@ -1,0 +1,14 @@
+{
+  "name": "46. MODE 0 -> Calculator ID, AC returns to MODE menu",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO"
+  },
+  "keys": [
+    "MODE",
+    "0"
+  ],
+  "expect": {
+    "indicators": []
+  }
+}

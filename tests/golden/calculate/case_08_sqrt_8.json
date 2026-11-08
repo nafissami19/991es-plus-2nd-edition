@@ -1,0 +1,21 @@
+{
+  "name": "8. √8 = 2√2",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SQRT",
+    "8",
+    "EXE"
+  ],
+  "expect": {
+    "result": "2√2",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

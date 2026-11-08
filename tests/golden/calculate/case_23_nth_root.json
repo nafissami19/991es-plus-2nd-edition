@@ -1,0 +1,25 @@
+{
+  "name": "23. 5√32 = 2",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "POWER",
+    "5",
+    "RIGHT",
+    "3",
+    "2",
+    "EXE"
+  ],
+  "expect": {
+    "result": "2",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

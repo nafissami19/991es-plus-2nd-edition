@@ -1,0 +1,31 @@
+{
+  "name": "6. 10√2 + 15 * 3√3 = 45√3 + 10√2",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "0",
+    "SQRT",
+    "2",
+    "RIGHT",
+    "ADD",
+    "1",
+    "5",
+    "MUL",
+    "3",
+    "SQRT",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "45√3+10√2",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

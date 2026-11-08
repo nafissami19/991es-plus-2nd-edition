@@ -1,0 +1,28 @@
+{
+  "name": "28. Multi-statement 3+3 : 3*3",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "3",
+    "ADD",
+    "3",
+    "ALPHA",
+    "INTEGRAL",
+    "3",
+    "MUL",
+    "3",
+    "EXE"
+  ],
+  "expect": {
+    "result": "6",
+    "indicators": [
+      "Math",
+      "D",
+      "Disp"
+    ]
+  }
+}

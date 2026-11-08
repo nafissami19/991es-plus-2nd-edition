@@ -1,0 +1,22 @@
+{
+  "name": "12. (-) 2 x² = -4 priority test",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "NEG",
+    "2",
+    "SQUARE",
+    "EXE"
+  ],
+  "expect": {
+    "result": "-4",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "9. sin 30) = 1/2 in MathO",
+  "source": "unverified",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SIN",
+    "3",
+    "0",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "1/2",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

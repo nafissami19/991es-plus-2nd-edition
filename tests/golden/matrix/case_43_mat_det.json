@@ -1,0 +1,36 @@
+{
+  "name": "43. MATRIX det([[2,1],[1,1]]) = 1",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO"
+  },
+  "keys": [
+    "MODE",
+    "6",
+    "1",
+    "5",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "AC",
+    "SHIFT",
+    "4",
+    "7",
+    "SHIFT",
+    "4",
+    "3",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "1",
+    "indicators": [
+      "MAT"
+    ]
+  }
+}

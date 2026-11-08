@@ -1,0 +1,33 @@
+{
+  "name": "39. CMPLX (2+6i)/(2i) = 3-i",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "MODE",
+    "2",
+    "LPAREN",
+    "2",
+    "ADD",
+    "6",
+    "ENG",
+    "RPAREN",
+    "DIV",
+    "LPAREN",
+    "2",
+    "ENG",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "3-i",
+    "indicators": [
+      "Math",
+      "D",
+      "CMPLX"
+    ]
+  }
+}

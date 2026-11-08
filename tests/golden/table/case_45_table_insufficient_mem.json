@@ -1,0 +1,24 @@
+{
+  "name": "45. TABLE f(X)=X Start 1 End 40 Step 1 -> Insufficient MEM",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO"
+  },
+  "keys": [
+    "MODE",
+    "7",
+    "ALPHA",
+    "RPAREN",
+    "EXE",
+    "1",
+    "EXE",
+    "4",
+    "0",
+    "EXE",
+    "1",
+    "EXE"
+  ],
+  "expect": {
+    "error": "Insufficient MEM"
+  }
+}

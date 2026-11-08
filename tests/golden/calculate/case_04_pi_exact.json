@@ -1,0 +1,26 @@
+{
+  "name": "4. \u03c0/6 -> 1/6 \u03c0 -> 0.5235987756",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "SHIFT",
+    "EXP10",
+    "DIV",
+    "6",
+    "EXE",
+    "SD"
+  ],
+  "expect": {
+    "result": "0.5235987756",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  },
+  "expectedFail": true,
+  "pendingPrompt": "Prompt 7"
+}

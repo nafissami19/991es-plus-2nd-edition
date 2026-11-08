@@ -1,0 +1,23 @@
+{
+  "name": "14. 1 / 200 in Norm 1 = 5×10⁻³",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "1",
+    "DIV",
+    "2",
+    "0",
+    "0",
+    "EXE"
+  ],
+  "expect": {
+    "result": "5×10⁻³",
+    "indicators": [
+      "D"
+    ]
+  }
+}

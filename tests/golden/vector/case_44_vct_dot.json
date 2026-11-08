@@ -1,0 +1,44 @@
+{
+  "name": "44. VECTOR (1,2)·(3,4) = 11",
+  "source": "guide",
+  "setup": {
+    "display": "LineIO"
+  },
+  "keys": [
+    "MODE",
+    "8",
+    "1",
+    "2",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "AC",
+    "SHIFT",
+    "5",
+    "1",
+    "2",
+    "2",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "AC",
+    "SHIFT",
+    "5",
+    "3",
+    "SHIFT",
+    "5",
+    "7",
+    "SHIFT",
+    "5",
+    "4",
+    "EXE"
+  ],
+  "expect": {
+    "result": "11",
+    "indicators": [
+      "VCT"
+    ]
+  }
+}

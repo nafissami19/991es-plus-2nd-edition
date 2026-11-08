@@ -1,0 +1,33 @@
+{
+  "name": "54. 2500 + 2500 × 15% = 2875",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "2",
+    "5",
+    "0",
+    "0",
+    "ADD",
+    "2",
+    "5",
+    "0",
+    "0",
+    "MUL",
+    "1",
+    "5",
+    "SHIFT",
+    "LPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "result": "2875",
+    "indicators": [
+      "Math",
+      "D"
+    ]
+  }
+}

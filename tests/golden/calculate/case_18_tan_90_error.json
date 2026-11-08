@@ -1,0 +1,19 @@
+{
+  "name": "18. tan 90) throws Math ERROR",
+  "source": "guide",
+  "setup": {
+    "display": "MthIO-MathO",
+    "angle": "Deg",
+    "format": "Norm1"
+  },
+  "keys": [
+    "TAN",
+    "9",
+    "0",
+    "RPAREN",
+    "EXE"
+  ],
+  "expect": {
+    "error": "Math ERROR"
+  }
+}
